@@ -1,0 +1,74 @@
+<!--  Author: Daniel Würmli -->
+
+<html lang="de">
+<head>
+  <!-- Zeichensatz für Umlaute, Emojis etc. -->
+  <meta charset="UTF-8">
+
+  <!-- Responsive Viewport für alle Gerätetypen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO-Beschreibung für Suchmaschinen -->
+  <meta name="description" content="Galerie von Daniel Würmli">
+
+  <!-- Browser-Tab Icon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Externes Stylesheet für Designregeln -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts – moderne Schrift -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Titel der Seite -->
+  <title>Galerie</title>
+</head>
+
+<body>
+  <div class="page-container">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="header-container">
+        <!-- Webseiten-Titel oben links -->
+        <h1 class="header-title">MyPage</h1>
+
+        <!-- Navigation durch die Seite -->
+        <nav class="nav-main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="place.html">Wohnort</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== HAUPTINHALT ===== -->
+    <main>
+      <section class="info-section">
+        <!-- Titel der Galerie -->
+        <h2 class="section-title">Ferien Galerie</h2>
+
+        <!-- Erste Bildreihe mit Hochformat-Bildern -->
+        <div class="gallery-row">
+          <img class="gallery-img-tall" src="images/ferien1.jpg" alt="Ferienbild 1">
+          <img class="gallery-img-tall" src="images/ferien2.jpg" alt="Ferienbild 2">
+          <img class="gallery-img-tall" src="images/ferien3.jpg" alt="Ferienbild 3">
+        </div>
+
+        <!-- Zweite Bildreihe mit Querformat-Bildern -->
+        <div class="gallery-row wide-row">
+          <img class="gallery-img-wide" src="images/ferien4.jpg" alt="Ferienbild 4">
+          <img class="gallery-img-wide" src="images/ferien5.jpg" alt="Ferienbild 5">
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FUSSZEILE ===== -->
+    <footer>
+      <p class="footer-text">© 2025 Daniel Würmli. Alle Rechte vorbehalten.</p>
+    </footer>
+  </div>
+</body>
+</html>

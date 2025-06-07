@@ -31,6 +31,28 @@ header {
   font-family: "Inter", sans-serif;
   animation: fadeIn 1s ease-in-out;
 }
+
+html, body {
+  height: 100%;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
   
 /* ===================================================
   Header
@@ -88,6 +110,10 @@ header {
 /* ===================================================
   Home-Body
   =================================================== */
+#home-section-title-margin {
+  margin-bottom: -6rem;
+}
+
 .typewriter-container {
   display: flex;
   justify-content: start;
@@ -97,7 +123,7 @@ header {
 }
 
 .typewriter {
-  display: inline-block; /* wichtig, damit Breite sich am Inhalt orientiert */
+  display: inline-block;
   font-size: 2rem;
   font-weight: bold;
   color: var(--text);
@@ -106,15 +132,16 @@ header {
   overflow: hidden;
   border-right: 2px solid var(--highlight);
   animation: blinkCursor 0.75s step-end infinite;
+  min-height: 2.5rem;
 }
 
 .img-container {
   display: flex;
-  justify-content: flex-end; /* Push Inhalt nach rechts */
+  justify-content: flex-end; 
 }
   
 .responsiv-img {
-  width: clamp(150px, 20vw, 300px); /* min 150px, max 300px – super responsive */
+  width: clamp(150px, 20vw, 300px); 
   height: auto;
   position: relative;
   border: none;
@@ -173,9 +200,81 @@ header {
   margin: 0.5rem 0;
 }
 
+.section-link {
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.section-link:hover {
+  color: var(--highlight);
+  text-shadow: 0 0 5px var(--highlight);
+}
+
+.info-link {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.info-link::after {
+  content: ' ↗';
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.info-link:hover {
+  text-shadow: 0 0 4px var(--highlight);
+  transform: translateY(-1px);
+}
+
+table {
+  width: 100%;
+  margin-top: 3rem;
+  border-collapse: collapse;
+}
+  
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text);
+}
+  
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+  
+.friend-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
 /* ===================================================
   Place-Body
   =================================================== */
+#place-section-title-margin {
+  margin-bottom: 2rem;
+}
+
+.map-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.map-wrapper iframe {
+  border-radius: 10px;
+  box-shadow:
+    -10px -10px 0 0 var(--highlight),
+    10px 10px 0 0 var(--accent);
+}
+
 .map-container {
   width: 610px;
   height: 460px;
@@ -190,6 +289,110 @@ header {
 
 #map {
   border-radius: 10px;
+}
+
+
+/* ===================================================
+  Galerie-Body
+  =================================================== */
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+  
+.gallery-img-tall {
+  width: 22rem;
+  height: 30rem;
+  border-radius: 10px;
+  box-shadow:
+    -10px -10px 0 0 var(--highlight),
+    10px 10px 0 0 var(--accent);
+}
+  
+.gallery-img-wide {
+  width: 34rem;
+  height: auto;
+  border-radius: 10px;
+  box-shadow:
+      -10px -10px 0 0 var(--highlight),
+    10px 10px 0 0 var(--accent);
+}
+  
+.wide-row {
+  justify-content: center;
+}
+
+/* ========================================
+   Kontaktformular Style
+   ======================================== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+}
+  
+.contact-form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+  text-align: left;
+}
+  
+.contact-form input,
+.contact-form textarea {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  outline: none;
+  transition: 0.3s ease;
+}
+  
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--highlight);
+  background: rgba(255, 255, 255, 0.1);
+}
+  
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+  
+.contact-form button {
+  background: var(--highlight);
+  color: var(--bg);
+  font-weight: bold;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+  
+.contact-form button:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+  
+/* Honeypot verstecken */
+.honeypot {
+  display: none;
 }
 
 /* ===================================================
@@ -224,7 +427,7 @@ header {
 }
 
 /* ===================================================
-  Media Queries
+  Media Queries (für spätere optimierung auf Mobile)
   =================================================== */
 @media (max-width: 768px) {
   

@@ -1,62 +1,141 @@
-<!DOCTYPE html>
+<!--  Author: Daniel Würmli -->
+
 <html lang="de">
 <head>
-  <!-- Meta-Informationen -->
+  <!-- Zeichensatz UTF-8 für Umlaute etc. -->
   <meta charset="UTF-8">
+
+  <!-- Responsive Design auf mobilen Geräten -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta-Beschreibung für Suchmaschinen -->
   <meta name="description" content="Willkommen auf meiner persönlichen Webseite. Hier erfährst du mehr über mich.">
 
-  <!-- Favicon & Styles -->
+  <!-- Favicon im Browser-Tab -->
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Externe CSS-Datei für Styling -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font "Inter" für moderne Typografie -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Seitentitel -->
+  <!-- Titel der Webseite (sichtbar im Tab) -->
   <title>MyPage</title>
 </head>
+
 <body>
-  <header>
-    <div class="header-container">
-      <!-- Haupttitel (links) -->
-      <h1 class="header-title">MyPage</h1>
-  
-      <!-- Navigation (rechts) -->
-      <nav class="nav-main">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Galerie</a></li>
-          <li><a href="place.html">Wohnort</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="page-container">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="header-container">
+        <h1 class="header-title">MyPage</h1>
 
-  <main>
-    <section class="intro-section">
-      <div class="intro-text">
-        <h2 class="typewriter"><span id="typed-text"> </span></h2>
+        <!-- Navigation zu Unterseiten -->
+        <nav class="nav-main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="place.html">Wohnort</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="intro-image">
-        <img class="responsiv-img" src="images/daniel1.jpg" alt="Bild von Daniel Würmli">
-      </div>
-    </section>
-  
-    <section class="info-section">
-      <h2>Über mich</h2>
-      <p><strong>Geburtsdatum:</strong> 07. August 2007</p>
-      <p><strong>Nationalität:</strong> Schweizer</p>
-      <p><strong>Grösse:</strong> 187cm</p>
-      <p><strong>Sprachen:</strong> Deutsch, Russisch, Englisch &</p>
-      <p><strong>Adresse:</strong> Besetzistrasse 22, 8500 Frauenfeld, Schweiz</p>
-      <p><strong>Hobbys:</strong> Gym, Muay Thai und Zeit mit Familie & Freunden verbringen</p>
-    </section>
-  </main>
+    </header>
 
-  <!-- JavaScript einbinden -->
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <!-- Begrüssung mit Bild und animiertem Typing-Effekt -->
+      <section class="info-section">
+        <h2 id="home-section-title-margin" class="section-title">Willkommen auf meiner Homepage</h2>
+
+        <div class="intro-section">
+          <!-- Typing-Text, wird via JS gefüllt -->
+          <div class="intro-text">
+            <h2 class="typewriter">
+              <span id="typed-text"> </span>
+            </h2>
+          </div>
+
+          <!-- Eigenes Bild -->
+          <div class="intro-image">
+            <img class="responsiv-img" src="images/daniel1.jpg" alt="Bild von Daniel Würmli">
+          </div>
+        </div>
+      </section>
+
+      <!-- Abschnitt Über mich mit Link zur Namensbedeutung -->
+      <section class="info-section">
+        <h2 class="section-title">
+          <a href="https://www.vorname.com/name,Daniel.html#:~:text=Der%20Name%20Daniel%20kommt%20aus,und%20„Gott%20ist%20mächtig“." 
+             target="_blank" 
+             class="section-link">
+            Über mich
+          </a>
+        </h2>
+
+        <p><strong>Geburtsdatum:</strong> 07. August 2007</p>
+        <p><strong>Nationalität:</strong> Schweizer</p>
+        <p><strong>Grösse:</strong> 187 cm</p>
+        <p><strong>Sprachen:</strong> Deutsch, Russisch, Englisch &</p>
+        <p><strong>Adresse:</strong> 
+          <a href="place.html" class="info-link">Besetzistrasse 22, 8500 Frauenfeld</a>
+        </p>
+        <p><strong>Hobbys:</strong> Gym, 
+          <a href="https://www.bangrajan.ch/" target="_blank" class="info-link">Muay Thai</a>, 
+          Zeit mit Familie & Freunden
+        </p>
+      </section>
+
+      <!-- Tabelle mit Freunden -->
+      <section class="info-section">
+        <h2 class="section-title">Meine Freunde</h2>
+
+        <table>
+          <tr>
+            <th>Bild</th>
+            <th>Name</th>
+            <th>Telefonnummer</th>
+          </tr>
+
+          <!-- Freund 1 -->
+          <tr>
+            <td><img class="friend-pic" src="images/freund1.jpg" alt="Freund 1"></td>
+            <td>Baran Uysal</td>
+            <td>+41 79 797 10 07</td>
+          </tr>
+
+          <!-- Freund 2 -->
+          <tr>
+            <td><img class="friend-pic" src="images/freund2.jpg" alt="Freund 2"></td>
+            <td>Jonas Walter</td>
+            <td>+41 79 431 46 74</td>
+          </tr>
+
+          <!-- Freund 3 -->
+          <tr>
+            <td><img class="friend-pic" src="images/freund3.jpg" alt="Freund 3"></td>
+            <td>Jenahan Karunakaran</td>
+            <td>+41 78 233 13 13</td>
+          </tr>
+
+          <!-- Freund 4 -->
+          <tr>
+            <td><img class="friend-pic" src="images/freund4.jpg" alt="Freund 4"></td>
+            <td>Luis Müller</td>
+            <td>+41 79 253 15 73</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p class="footer-text">© 2025 Daniel Würmli. Alle Rechte vorbehalten.</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript-Datei für dynamische Funktionen -->
   <script src="script.js"></script>
-  <footer>
-    <p class="footer-text">© 2025 Daniel Würmli. Alle Rechte vorbehalten.</p>
-  </footer>
 </body>
 </html>

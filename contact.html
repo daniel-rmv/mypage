@@ -1,0 +1,90 @@
+<!--  Author: Daniel Würmli -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Zeichensatz und Responsivität -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO-Beschreibung -->
+  <meta name="description" content="Kontaktformular von Daniel Würmli">
+
+  <!-- Browser-Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Zentrales Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Moderne Google-Schrift -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Seitentitel -->
+  <title>Kontakt</title>
+</head>
+
+<body>
+  <div class="page-container">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <div class="header-container">
+        <h1 class="header-title">MyPage</h1>
+
+        <!-- Navigation durch die Website -->
+        <nav class="nav-main">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="place.html">Wohnort</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== FORMULAR ===== -->
+    <main>
+      <section class="info-section">
+        <h2 class="section-title">Kontaktformular</h2>
+
+        <!-- Formularstruktur mit Pflichtfeldern -->
+        <form class="contact-form" id="contactForm">
+          
+          <!-- Betreff-Feld -->
+          <label for="subject">Betreff:</label>
+          <input type="text" id="subject" name="Betreff" required>
+
+          <!-- Name -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="Name" required>
+
+          <!-- Datumsauswahl -->
+          <label for="date">Datum:</label>
+          <input type="date" id="date" name="Datum" required>
+
+          <!-- Nachrichtentext -->
+          <label for="message">Nachricht:</label>
+          <textarea id="message" name="Nachricht" rows="5" required></textarea>
+
+          <!-- Honeypot-Feld (wird von echten Nutzern nie ausgefüllt) -->
+          <input type="text" id="website" name="website" class="honeypot" autocomplete="off">
+
+          <!-- Zeitstempel bei Seitenstart zur Spam-Vermeidung -->
+          <input type="hidden" id="startTime" name="startTime">
+
+          <!-- Absende-Button -->
+          <button type="submit">Nachricht senden</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- ===== FUSSZEILE ===== -->
+    <footer>
+      <p class="footer-text">© 2025 Daniel Würmli. Alle Rechte vorbehalten.</p>
+    </footer>
+  </div>
+
+  <!-- JS zur Formularverarbeitung & Zeitstempel -->
+  <script src="script.js"></script>
+</body>
+</html>
