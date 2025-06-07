@@ -38,13 +38,6 @@ Dieses Projekt ist eine einfache, moderne und responsive Website, mit der ich mi
 
 ---
 
-## 📩 Kontakt
-
-> Daniel Würmli  
-> 📧 Kontakt über das [Kontaktformular](contact.html)
-
----
-
 ## 📝 Lizenz
 
 Dieses Projekt ist privat 
