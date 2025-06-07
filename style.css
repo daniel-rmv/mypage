@@ -381,7 +381,6 @@ tr:hover {
   border: none;
   padding: 0.9rem;
   border-radius: 0.75rem;
-  cursor: pointer;
   transition: background 0.3s ease;
 }
   
