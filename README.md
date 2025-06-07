@@ -24,7 +24,7 @@ Dieses Projekt ist eine einfache, moderne und responsive Website, mit der ich mi
 ## 🧪 Vorschau
 
 > **Live-Demo:**  
-> [[https://dein-name.github.io/mypage](https://dein-name.github.io/mypage)](https://daniel-rmv.github.io/mypage/)
+> https://daniel-rmv.github.io/mypage/
 
 ---
 
