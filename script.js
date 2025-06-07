@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const fullMessage = `${message}\n\nLiebe Grüsse\n${decodeURIComponent(name)} (${date})`;
 
-      const mailtoLink = `mailto:daniel@example.com?subject=${subject}&body=${encodeURIComponent(fullMessage)}`;
+      const mailtoLink = `mailto:daniel.wuermli@icloud.com?subject=${subject}&body=${encodeURIComponent(fullMessage)}`;
 
       window.location.href = mailtoLink;
     });
