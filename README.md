@@ -1,4 +1,4 @@
-
+ko
 # 🌐 MyPage – Persönliche Website von Daniel Würmli
 
 Willkommen auf meiner persönlichen Webseite!  
@@ -25,9 +25,7 @@ Dieses Projekt ist eine einfache, moderne und responsive Website, mit der ich mi
 
 > **Live-Demo:**  
 > https://daniel-rmv.github.io/mypage/
-> Die Seite ist für Desktop gedacht
-> Funktioniert auch auf iPad & Tablet
-> Mobile wird in Zukunft noch erweitert
+> Die Seite ist für Desktop gedacht, funktioniert jedoch auch auf iPad & Tablet und Mobile wird in Zukunft noch erweitert
 
 ---
 
