@@ -1,4 +1,3 @@
-ko
 # 🌐 MyPage – Persönliche Website von Daniel Würmli
 
 Willkommen auf meiner persönlichen Webseite!  
